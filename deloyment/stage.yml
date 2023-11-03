@@ -8,7 +8,7 @@ phases:
   pre_build:
     commands:
       - npm --version
-      - echo Installing Node Dependencies
+      - echo Installing Node Dependencies for build
       - npm ci
   build:
     commands:
