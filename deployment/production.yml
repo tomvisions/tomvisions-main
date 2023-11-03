@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - git config --global credential.helper '!aws --region us-east-1 codecommit credential-helper $@'
+      - git config --global credential.UseHttpPath true
+  pre_build:
+    commands:
+      - npm --version
+      - echo Installing Node Dependencies for build
+      - npm ci
+  build:
+    commands:
+      - npm run build
+  post_build:
+    commands:
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist'
+  discard-paths: no
