@@ -28,7 +28,8 @@ const HeaderNavigation = () => {
                   : "w-full h-20 rounded-[10px]  cursor-pointer  font-poppins  bg-[#F3F6F6]  font-medium mx-2.5  text-xtiny text-gray-lite dark:text-[#A6A6A6]    justify-center flex flex-col items-center   transition-all duration-300 ease-in-out dark:hover:text-white dark:bg-[#212425] hover:text-white   hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476]"
               } `}
               href={item.routePath}
-            >
+              target={`${item.name == 'Github' ? "_blank" : "_self"}`}       
+             >
               <span className="text-xl mb-1">{item.icon}</span>
               {item.name}
             </Link>

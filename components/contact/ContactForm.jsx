@@ -2,47 +2,67 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+//import { NextResponse } from "next/server";
+
+
+async function sendToApi(event) {
+
+  const jsonEmail = {
+    "name": event.target.name.value,
+    "email_type":"contact",
+    "email": event.target.email.value,
+    "message": event.target.message.value
+  }
+
+  // const res = await fetch('https://api.tomvisions.com/api/v1/mail', {
+
+  const res = await fetch('http://127.0.0.1:3000/api/v1/mail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(jsonEmail),
+  });
+
+  return await res.json();
+}
 
 const CommonContact = ({ condition }) => {
   const form = useRef();
 
-  // use Email js for recive message
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_n4mkhz9",
-        "template_ugoztxr",
-        form.current,
-        "user_vYmDSd9PwIuRXUQEDjYwN"
-      )
-      .then(
-        (result) => {
-          console.log(result);
-          toast.success("Message Sent successfully!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-          document.getElementById("myForm").reset();
-        },
-        (error) => {
-          toast.error("Ops Message not Sent!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
-        }
-      );
+
+  // use Email js for recive messag
+  
+  const sendEmail = async (event) => {
+    event.preventDefault();
+    await sendToApi(event).then(
+      (result) => {
+        console.log('asdfasdf');
+        console.log(result);
+        toast.success("Message Sent successfully!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        document.getElementById("myForm").reset();
+      },
+      (error) => {
+        toast.error("Ops Message not Sent!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    );
   };
 
   return (
@@ -85,14 +105,14 @@ const CommonContact = ({ condition }) => {
         <div className="relative z-0 w-full mb-8 group">
           <input
             type="email"
-            name="user_email"
+            name="email"
             className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
             placeholder=" "
-            id="user_email"
+            id="email"
             required
           />
           <label
-            htmlFor="user_email"
+            htmlFor="email"
             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
           >
             Email *
