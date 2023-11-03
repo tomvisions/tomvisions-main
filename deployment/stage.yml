@@ -11,7 +11,6 @@ phases:
     commands:
       - npm --version
       - echo Installing Node Dependencies for build
-      - ls -al
       - npm ci
   build:
     commands:
