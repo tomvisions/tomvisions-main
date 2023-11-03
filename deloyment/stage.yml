@@ -1,7 +1,9 @@
 version: 0.2
-
+nodejs: latest
 phases:
   install:
+    runtime-versions:
+      nodejs: latest
     commands:
       - git config --global credential.helper '!aws --region us-east-1 codecommit credential-helper $@'
       - git config --global credential.UseHttpPath true
