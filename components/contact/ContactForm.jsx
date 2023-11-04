@@ -14,9 +14,9 @@ async function sendToApi(event) {
     "message": event.target.message.value
   }
 
-  // const res = await fetch('https://api.tomvisions.com/api/v1/mail', {
+   const res = await fetch('https://api.tomvisions.com/api/v1/mail', {
 
-  const res = await fetch('http://127.0.0.1:3000/api/v1/mail', {
+  //const res = await fetch('http://127.0.0.1:3000/api/v1/mail', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
