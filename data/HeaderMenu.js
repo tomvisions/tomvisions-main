@@ -12,22 +12,10 @@ module.exports = [
     icon: <AiOutlineHome />,
   },
   {
-    id: 2,
-    name: "Gallery",
-    routePath: "https://gallery.tomvisions.com",
-    icon: <CgNotes />,
-  },
-  {
     id: 3,
     name: "Github",
     routePath: "https://github.com/tomvisions",
     icon: <FiCodesandbox />,
-  },
-  {
-    id: 4,
-    name: "Wedding",
-    routePath: "https://wedding.tomvisions.com",
-    icon: <FaBlogger />,
   },
   {
     id: 5,
