@@ -12,7 +12,7 @@ const Service = () => {
           className="about-box dark:bg-transparent"
           key={item.id}
           style={{
-            background: `${theme === "dark" ? "transparent" : item?.bg}`,
+            background: "transparent",
           }}
         >
           <Image
