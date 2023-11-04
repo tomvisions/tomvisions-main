@@ -36,7 +36,6 @@ const CommonContact = ({ condition }) => {
     event.preventDefault();
     await sendToApi(event).then(
       (result) => {
-        console.log(result);
         if (result.success) {  
         toast.success("Message Sent successfully!", {
           position: "top-right",
