@@ -38,8 +38,8 @@ const CommonContact = ({ condition }) => {
     event.preventDefault();
     await sendToApi(event).then(
       (result) => {
-        console.log('asdfasdf');
         console.log(result);
+        if (result.success) {  
         toast.success("Message Sent successfully!", {
           position: "top-right",
           autoClose: 5000,
@@ -50,8 +50,7 @@ const CommonContact = ({ condition }) => {
           progress: undefined,
         });
         document.getElementById("myForm").reset();
-      },
-      (error) => {
+      } else {
         toast.error("Ops Message not Sent!", {
           position: "top-right",
           autoClose: 5000,
@@ -62,6 +61,7 @@ const CommonContact = ({ condition }) => {
           progress: undefined,
         });
       }
+    }
     );
   };
 
