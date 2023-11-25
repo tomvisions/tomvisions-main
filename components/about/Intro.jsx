@@ -10,7 +10,7 @@ const Intro = () => {
             <div className="lg:mr-16">
               <p className="text-gray-lite  dark:text-color-910 leading-7">
                 I&apos;m a Senior Software Developer/DevOps Engineer with a unique combination of skills, drive and experience. I have a passion for developing creative solutions that increase the efficiency of 
-                business processes and operations. I also love web development, and designing business logic to enhance web applcations. 
+                business processes and operations. I also love web development, and designing business logic to enhance web applications. 
               </p>
               <p className="text-gray-lite leading-7 mt-2.5 dark:text-color-910">
                 My aim is to bring value to whatever company I work for. I specialize in helping companies leverage technology to optimize their business through the use of automation and tools. 
