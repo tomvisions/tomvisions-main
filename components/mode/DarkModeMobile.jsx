@@ -7,9 +7,11 @@ export default function DarkModeMobile() {
   // toggle of dark & light mode
   const toggle = () => {
     if (theme === "light") setTheme("dark");
-    else setTheme("light");
+    else setTheme("dark");
   };
 
+  toggle();
+  
   return (
     <>
       <span

@@ -10,6 +10,8 @@ export default function DarkMode() {
     else setTheme("dark");
   };
 
+  toggle();
+
   return (
     <>
       <span
