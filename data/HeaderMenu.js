@@ -13,7 +13,7 @@ module.exports = [
   {
     id: 2,
     name: "Gallery",
-    routePath: "https://photograpthy.tomvisions.com",
+    routePath: "https://photography.tomvisions.com",
     icon: <AiOutlinePicture />,
   },
   {
