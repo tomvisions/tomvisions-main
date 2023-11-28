@@ -28,8 +28,11 @@ const index = () => {
               <div className="container mb-8   px-4 sm:px-5 md:px-10 lg:px-[60px]">
                 <div className="py-12">
                   <h2 className="after-effect  after:left-48 mt-12  lg:mt-0">
-                    Blogs
+                    Projects
                   </h2>
+                  <p>
+                    Here are notable projects that I have been working on.
+                  </p>
                   <BlogTwo />
                 </div>
               </div>

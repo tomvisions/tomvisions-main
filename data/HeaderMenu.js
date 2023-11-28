@@ -1,7 +1,6 @@
 import { AiOutlineHome } from "react-icons/ai";
-import { FaBlogger } from "react-icons/fa";
-import { CgNotes } from "react-icons/cg";
-import { FiCodesandbox } from "react-icons/fi";
+import { AiOutlinePicture } from "react-icons/ai";
+import { AiOutlineGithub } from "react-icons/ai";
 import { RiContactsBookLine } from "react-icons/ri";
 
 module.exports = [
@@ -15,13 +14,13 @@ module.exports = [
     id: 2,
     name: "Gallery",
     routePath: "https://photograpthy.tomvisions.com",
-    icon: <CgInpicture />,
+    icon: <AiOutlinePicture />,
   },
   {
     id: 3,
     name: "Github",
     routePath: "https://github.com/tomvisions",
-    icon: <FiCodesandbox />,
+    icon: <AiOutlineGithub />,
   },
   {
     id: 5,
