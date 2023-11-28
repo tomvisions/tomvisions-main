@@ -10,8 +10,8 @@ export default function DarkMode() {
     else setTheme("dark");
   };
 
-  toggle();
-
+  return toggle();
+/*
   return (
     <>
       <span
@@ -22,5 +22,5 @@ export default function DarkMode() {
         <FiSun className="text-2xl dark-mode-dark hidden  fill-jacarta-700  group-hover:fill-white group-focus:fill-white dark:block dark:fill-white " />
       </span>
     </>
-  );
+  ); */
 }
