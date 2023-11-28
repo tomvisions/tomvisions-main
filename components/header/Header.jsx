@@ -11,8 +11,6 @@ import { useRouter } from "next/router";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
-  console.log('testing');
-  console.log(DarkMode);
   DarkMode();
   DarkModeMobile()
   return (
