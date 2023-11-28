@@ -9,6 +9,7 @@ import Brand from "../components/brand/Brand";
 import Footer from "../components/footer/Footer";
 
 const index = () => {
+  console.log('index');
   return (
     <section className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-homeTwoBg-dark  md:pb-16 w-full">
       <Seo pageTitle="Home" />
