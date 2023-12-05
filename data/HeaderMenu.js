@@ -2,6 +2,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlinePicture } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
 import { RiContactsBookLine } from "react-icons/ri";
+import { AiFillRocket} from "react-icons/ai";
 
 module.exports = [
   {
@@ -21,6 +22,12 @@ module.exports = [
     name: "Github",
     routePath: "https://github.com/tomvisions",
     icon: <AiOutlineGithub />,
+  },
+  {
+    id: 4,
+    name: "Wedding",
+    routePath: "https://wedding.tomvisions.com",
+    icon: <AiFillRocket />,
   },
   {
     id: 5,
