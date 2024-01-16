@@ -18,7 +18,7 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - run: echo "Performing Install"
       - run: yarn install
-       - run: echo "Performing build"
+      - run: echo "Performing build"
       - run: next build
       - run: echo "Performing test on app"
       - run: echo "🍏 This job's status is ${{ job.status }}."
