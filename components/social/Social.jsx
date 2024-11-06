@@ -8,12 +8,6 @@ import {
 const Social = () => {
   const socialContent = [
     {
-      id: 2,
-      link: "https://twitter.com/tomvisions",
-      icon: <FaTwitter />,
-      iconClass: "text-[#1C9CEA]",
-    },
-    {
       id: 4,
       link: "https://www.linkedin.com/in/thomas-cruickshank-a815842/",
       icon: <FaLinkedinIn />,
