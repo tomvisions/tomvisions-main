@@ -7,7 +7,7 @@ import { restAPIUrl } from '../../shared/environment';
 
 
 async function sendToApi(event) {
-
+console.log(restAPIUrl);
   const jsonEmail = {
     "name": event.target.name.value,
     "email_type":"contact",

@@ -1,6 +1,9 @@
 export const environment = process.env.REACT_APP_ENVIRONMENT
+console.log("environment");
 console.log(environment);
+console.log(process.env)
 let restAPIUrl;
+
 
 switch(environment) {
     case "dev":
@@ -16,4 +19,5 @@ switch(environment) {
 
 }
 
+console.log(restAPIUrl);
 export { restAPIUrl }
