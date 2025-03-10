@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { restAPIUrl } from '../../shared/environment';
 //import { NextResponse } from "next/server";
 
 
@@ -14,11 +15,8 @@ async function sendToApi(event) {
     "message": event.target.message.value
   }
 
-   const res = await fetch('https://api.tomvisions.com/mail', {
+   const res = await fetch(`${restAPIUrl}/mail`, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
     body: JSON.stringify(jsonEmail),
   });
 
